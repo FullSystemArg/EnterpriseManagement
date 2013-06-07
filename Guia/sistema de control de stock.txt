@@ -1,0 +1,100 @@
++-----------------------+
+| A, B, M, de Articulos |
++-----------------------+
+
+* Codigo de Fabricante
+* Codigo de barras
+* Descripcion
+* Precio Costo Final
+  + Precio Costo
+  + Precio Embalaje
+  + Precio Flete
+
+* Cantidad Minima de Art. (stock Minimo)
+* Punto de reposicion
+
+No se puede eliminar un art con stock o movimientos de stock.
+
+
++---------------------------+
+| Alta de Stock             |
++---------------------------+
+
+*posibilidad de proratear el precio actual con el stock vigente
+* proveedor 
+* fecha
+* origen / destino
+* moneda
+
+________________________________
+
++----------------------------------+
+| A, B, M, de Conversion cambiaria |
++----------------------------------+
+
+* Precio en dolares
+* Variables Peso Argentino y Peso Chileno
+
+________________________________
+
+
+
++---------------------------+
+| A, B, M, de Proveedsores  | HECHO
++---------------------------+
+
+* ID Proveedor
+* Direccion Completa
+
+
+___________________________________________________________________________________________________________________________
+
+
+
+
+
++-----------------------------+
+| Operacion Ordenes de Compra |
++-----------------------------+
+
++---------------------------+
+| Operacion ventas          | NUEVA TABLA
++---------------------------+
+
+ver excel ventas y excel de para vender
+fecha
+numero de operacion
+numero de garantia
+numero de factura
+origen de la venta (pagina, telefono, groupon, ml)
+forma de pago (contado, tarjeta, Mercado Pago, deposito)
+Retira en el local
+Envio a domicilio: informar e imprir para enviar (estados del envio)
+
+
+___________________________________________________________________________________________________________________________
+
+Parte contable
+Gastos
+Alquileres
+gastos varios
+luz
+gas
+internet
+publicidad
+telefono
+celular
+comisiones
+ganancias diaria
+ganancia semanal
+ganancia mensual
+% de ganancia de cada art.
+% de ganancia x socio
+
+
+
+
+
+
+
+
