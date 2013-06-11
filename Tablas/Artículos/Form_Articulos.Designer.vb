@@ -24,7 +24,7 @@ Partial Class Form_Articulos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Articulos))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cb_Codigo = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -44,8 +44,8 @@ Partial Class Form_Articulos
         Me.btn_Grabar_Articulo = New System.Windows.Forms.Button()
         Me.btn_Limpiar = New System.Windows.Forms.Button()
         Me.btn_Eliminar_Articulo = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.tb_Barras = New System.Windows.Forms.TextBox()
+        Me.tb_Descripcion = New System.Windows.Forms.TextBox()
         Me.lbl_Descripcion = New System.Windows.Forms.Label()
         Me.lbl_Barra = New System.Windows.Forms.Label()
         Me.lbl_Fabricante = New System.Windows.Forms.Label()
@@ -64,40 +64,44 @@ Partial Class Form_Articulos
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.DG_Articulos = New System.Windows.Forms.DataGridView()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.DG_Articulos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.ComboBox2)
+        Me.Panel1.Controls.Add(Me.cb_Codigo)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.btn_Buscar)
         Me.Panel1.Controls.Add(Me.btn_Grabar_Articulo)
         Me.Panel1.Controls.Add(Me.btn_Limpiar)
         Me.Panel1.Controls.Add(Me.btn_Eliminar_Articulo)
-        Me.Panel1.Controls.Add(Me.TextBox8)
-        Me.Panel1.Controls.Add(Me.TextBox7)
+        Me.Panel1.Controls.Add(Me.tb_Barras)
+        Me.Panel1.Controls.Add(Me.tb_Descripcion)
         Me.Panel1.Controls.Add(Me.lbl_Descripcion)
         Me.Panel1.Controls.Add(Me.lbl_Barra)
         Me.Panel1.Controls.Add(Me.lbl_Fabricante)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(287, 315)
+        Me.Panel1.Size = New System.Drawing.Size(287, 342)
         Me.Panel1.TabIndex = 18
         '
-        'ComboBox2
+        'cb_Codigo
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(137, 22)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(131, 21)
-        Me.ComboBox2.TabIndex = 39
+        Me.cb_Codigo.FormattingEnabled = True
+        Me.cb_Codigo.Location = New System.Drawing.Point(137, 22)
+        Me.cb_Codigo.Name = "cb_Codigo"
+        Me.cb_Codigo.Size = New System.Drawing.Size(131, 21)
+        Me.cb_Codigo.TabIndex = 39
         '
         'Panel3
         '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.TextBox15)
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.TextBox6)
@@ -112,7 +116,7 @@ Partial Class Form_Articulos
         Me.Panel3.Controls.Add(Me.lbl_Reposicion)
         Me.Panel3.Controls.Add(Me.lbl_Minimo)
         Me.Panel3.Controls.Add(Me.lbl_Precio)
-        Me.Panel3.Location = New System.Drawing.Point(9, 104)
+        Me.Panel3.Location = New System.Drawing.Point(8, 114)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(271, 157)
         Me.Panel3.TabIndex = 38
@@ -232,7 +236,7 @@ Partial Class Form_Articulos
         'btn_Buscar
         '
         Me.btn_Buscar.Image = CType(resources.GetObject("btn_Buscar.Image"), System.Drawing.Image)
-        Me.btn_Buscar.Location = New System.Drawing.Point(51, 267)
+        Me.btn_Buscar.Location = New System.Drawing.Point(53, 289)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Buscar.TabIndex = 21
@@ -240,7 +244,7 @@ Partial Class Form_Articulos
         '
         'btn_Grabar_Articulo
         '
-        Me.btn_Grabar_Articulo.Location = New System.Drawing.Point(205, 281)
+        Me.btn_Grabar_Articulo.Location = New System.Drawing.Point(207, 303)
         Me.btn_Grabar_Articulo.Name = "btn_Grabar_Articulo"
         Me.btn_Grabar_Articulo.Size = New System.Drawing.Size(75, 23)
         Me.btn_Grabar_Articulo.TabIndex = 37
@@ -250,7 +254,7 @@ Partial Class Form_Articulos
         'btn_Limpiar
         '
         Me.btn_Limpiar.Image = CType(resources.GetObject("btn_Limpiar.Image"), System.Drawing.Image)
-        Me.btn_Limpiar.Location = New System.Drawing.Point(9, 267)
+        Me.btn_Limpiar.Location = New System.Drawing.Point(11, 289)
         Me.btn_Limpiar.Name = "btn_Limpiar"
         Me.btn_Limpiar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Limpiar.TabIndex = 20
@@ -258,26 +262,26 @@ Partial Class Form_Articulos
         '
         'btn_Eliminar_Articulo
         '
-        Me.btn_Eliminar_Articulo.Location = New System.Drawing.Point(133, 281)
+        Me.btn_Eliminar_Articulo.Location = New System.Drawing.Point(135, 303)
         Me.btn_Eliminar_Articulo.Name = "btn_Eliminar_Articulo"
         Me.btn_Eliminar_Articulo.Size = New System.Drawing.Size(66, 23)
         Me.btn_Eliminar_Articulo.TabIndex = 20
         Me.btn_Eliminar_Articulo.Text = "Eliminar"
         Me.btn_Eliminar_Articulo.UseVisualStyleBackColor = True
         '
-        'TextBox8
+        'tb_Barras
         '
-        Me.TextBox8.Location = New System.Drawing.Point(117, 48)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox8.TabIndex = 34
+        Me.tb_Barras.Location = New System.Drawing.Point(117, 48)
+        Me.tb_Barras.Name = "tb_Barras"
+        Me.tb_Barras.Size = New System.Drawing.Size(151, 20)
+        Me.tb_Barras.TabIndex = 34
         '
-        'TextBox7
+        'tb_Descripcion
         '
-        Me.TextBox7.Location = New System.Drawing.Point(92, 74)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(176, 20)
-        Me.TextBox7.TabIndex = 33
+        Me.tb_Descripcion.Location = New System.Drawing.Point(92, 74)
+        Me.tb_Descripcion.Name = "tb_Descripcion"
+        Me.tb_Descripcion.Size = New System.Drawing.Size(176, 20)
+        Me.tb_Descripcion.TabIndex = 33
         '
         'lbl_Descripcion
         '
@@ -319,6 +323,7 @@ Partial Class Form_Articulos
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.ComboBox1)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)
@@ -331,15 +336,15 @@ Partial Class Form_Articulos
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Location = New System.Drawing.Point(305, 12)
+        Me.Panel2.Location = New System.Drawing.Point(12, 360)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(264, 155)
+        Me.Panel2.Size = New System.Drawing.Size(287, 155)
         Me.Panel2.TabIndex = 19
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(197, 51)
+        Me.ComboBox1.Location = New System.Drawing.Point(207, 43)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(54, 21)
         Me.ComboBox1.TabIndex = 52
@@ -347,7 +352,7 @@ Partial Class Form_Articulos
         'Button2
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(14, 108)
+        Me.Button2.Location = New System.Drawing.Point(11, 108)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(36, 37)
         Me.Button2.TabIndex = 51
@@ -355,7 +360,7 @@ Partial Class Form_Articulos
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(188, 122)
+        Me.Button1.Location = New System.Drawing.Point(207, 115)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(63, 23)
         Me.Button1.TabIndex = 50
@@ -364,14 +369,14 @@ Partial Class Form_Articulos
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(55, 78)
+        Me.TextBox13.Location = New System.Drawing.Point(65, 70)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(70, 20)
         Me.TextBox13.TabIndex = 49
         '
         'TextBox14
         '
-        Me.TextBox14.Location = New System.Drawing.Point(180, 78)
+        Me.TextBox14.Location = New System.Drawing.Point(190, 70)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(71, 20)
         Me.TextBox14.TabIndex = 48
@@ -379,7 +384,7 @@ Partial Class Form_Articulos
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(131, 81)
+        Me.Label9.Location = New System.Drawing.Point(141, 73)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(43, 13)
         Me.Label9.TabIndex = 47
@@ -388,7 +393,7 @@ Partial Class Form_Articulos
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(13, 81)
+        Me.Label10.Location = New System.Drawing.Point(23, 73)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 13)
         Me.Label10.TabIndex = 46
@@ -396,14 +401,14 @@ Partial Class Form_Articulos
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(75, 26)
+        Me.TextBox10.Location = New System.Drawing.Point(85, 18)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(176, 20)
         Me.TextBox10.TabIndex = 45
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(55, 52)
+        Me.TextBox11.Location = New System.Drawing.Point(65, 44)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(84, 20)
         Me.TextBox11.TabIndex = 44
@@ -411,7 +416,7 @@ Partial Class Form_Articulos
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(145, 55)
+        Me.Label6.Location = New System.Drawing.Point(155, 47)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(46, 13)
         Me.Label6.TabIndex = 42
@@ -420,7 +425,7 @@ Partial Class Form_Articulos
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 55)
+        Me.Label7.Location = New System.Drawing.Point(23, 47)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(37, 13)
         Me.Label7.TabIndex = 41
@@ -429,7 +434,7 @@ Partial Class Form_Articulos
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(13, 29)
+        Me.Label8.Location = New System.Drawing.Point(23, 21)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 40
@@ -439,37 +444,59 @@ Partial Class Form_Articulos
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(317, 7)
+        Me.Label5.Location = New System.Drawing.Point(18, 357)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(92, 15)
         Me.Label5.TabIndex = 39
         Me.Label5.Text = "Alta De Stock"
         '
+        'DG_Articulos
+        '
+        Me.DG_Articulos.AllowUserToAddRows = False
+        Me.DG_Articulos.AllowUserToDeleteRows = False
+        Me.DG_Articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DG_Articulos.Location = New System.Drawing.Point(309, 14)
+        Me.DG_Articulos.Name = "DG_Articulos"
+        Me.DG_Articulos.ReadOnly = True
+        Me.DG_Articulos.Size = New System.Drawing.Size(883, 501)
+        Me.DG_Articulos.TabIndex = 40
+        '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(53, 108)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(36, 37)
+        Me.Button3.TabIndex = 53
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form_Articulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(578, 336)
+        Me.ClientSize = New System.Drawing.Size(1204, 521)
+        Me.Controls.Add(Me.DG_Articulos)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Form_Articulos"
-        Me.Text = "Stock"
+        Me.Text = "Articulos"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.DG_Articulos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_Barras As System.Windows.Forms.TextBox
+    Friend WithEvents tb_Descripcion As System.Windows.Forms.TextBox
     Friend WithEvents lbl_Descripcion As System.Windows.Forms.Label
     Friend WithEvents lbl_Barra As System.Windows.Forms.Label
     Friend WithEvents lbl_Fabricante As System.Windows.Forms.Label
@@ -506,5 +533,7 @@ Partial Class Form_Articulos
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents cb_Codigo As System.Windows.Forms.ComboBox
+    Friend WithEvents DG_Articulos As System.Windows.Forms.DataGridView
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

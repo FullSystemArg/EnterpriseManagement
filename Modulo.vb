@@ -21,6 +21,9 @@
     Public strDomicilio As String
     Public strCP As String
 
+    'Variables para Articulos
+    Public CadenaArticulos As String
+
     Public Sub Mensaje(ByVal Id As Integer)
         Select Case Id
             Case Is = 1
