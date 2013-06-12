@@ -118,6 +118,12 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tablas\Artículos\oArticulos.vb" />
     <Compile Include="Tablas\Artículos\Form_Articulos.Designer.vb">
       <DependentUpon>Form_Articulos.vb</DependentUpon>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tablas\Artículos\Form_Articulos.resx">
       <DependentUpon>Form_Articulos.vb</DependentUpon>
