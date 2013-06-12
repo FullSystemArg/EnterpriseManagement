@@ -49,4 +49,6 @@
         CadenaArticulos = FiltroSQL()
         oArticulos.CargarDG_Articulos(DG_Articulos, CadenaArticulos)
     End Sub
+
+
 End Class
