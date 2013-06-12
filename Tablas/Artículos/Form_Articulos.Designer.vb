@@ -51,6 +51,7 @@ Partial Class Form_Articulos
         Me.lbl_Fabricante = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -65,7 +66,6 @@ Partial Class Form_Articulos
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DG_Articulos = New System.Windows.Forms.DataGridView()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -341,6 +341,15 @@ Partial Class Form_Articulos
         Me.Panel2.Size = New System.Drawing.Size(287, 155)
         Me.Panel2.TabIndex = 19
         '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(53, 108)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(36, 37)
+        Me.Button3.TabIndex = 53
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
@@ -460,15 +469,6 @@ Partial Class Form_Articulos
         Me.DG_Articulos.ReadOnly = True
         Me.DG_Articulos.Size = New System.Drawing.Size(883, 501)
         Me.DG_Articulos.TabIndex = 40
-        '
-        'Button3
-        '
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(53, 108)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(36, 37)
-        Me.Button3.TabIndex = 53
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Form_Articulos
         '

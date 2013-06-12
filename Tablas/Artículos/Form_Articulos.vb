@@ -49,8 +49,4 @@
         CadenaArticulos = FiltroSQL()
         oArticulos.CargarDG_Articulos(DG_Articulos, CadenaArticulos)
     End Sub
-
-    Private Sub btn_Eliminar_Articulo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar_Articulo.Click
-
-    End Sub
 End Class
