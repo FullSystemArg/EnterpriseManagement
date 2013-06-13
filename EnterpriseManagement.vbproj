@@ -106,22 +106,22 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Tablas\Conversion Cambiaria\Form_Conversion.Designer.vb">
+      <DependentUpon>Form_Conversion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Tablas\Conversion Cambiaria\Form_Conversion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="Tablas\Ventas\Form_Ventas.Designer.vb">
+      <DependentUpon>Form_Ventas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="Tablas\Ventas\Form_Ventas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <Compile Include="Tablas\Ordenes De Compra\Form_Oc.Designer.vb">
+      <DependentUpon>Form_Oc.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form4.vb">
+    <Compile Include="Tablas\Ordenes De Compra\Form_Oc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tablas\Artículos\oArticulos.vb" />
@@ -145,15 +145,8 @@
     <Compile Include="Tablas\Proveedores\Form_Proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tablas\Fondos\oCuentasBancarias.vb" />
     <Compile Include="SQL\SQLProvider.vb" />
     <Compile Include="SQL\SQLHelper.vb" />
-    <Compile Include="Tablas\Fondos\Form_CuentasBancarias.Designer.vb">
-      <DependentUpon>Form_CuentasBancarias.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tablas\Fondos\Form_CuentasBancarias.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Formulario.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -178,14 +171,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="Tablas\Conversion Cambiaria\Form_Conversion.resx">
+      <DependentUpon>Form_Conversion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="Tablas\Ventas\Form_Ventas.resx">
+      <DependentUpon>Form_Ventas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <EmbeddedResource Include="Tablas\Ordenes De Compra\Form_Oc.resx">
+      <DependentUpon>Form_Oc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tablas\Artículos\Form_Articulos.resx">
       <DependentUpon>Form_Articulos.vb</DependentUpon>
@@ -195,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tablas\Proveedores\Form_Proveedores.resx">
       <DependentUpon>Form_Proveedores.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tablas\Fondos\Form_CuentasBancarias.resx">
-      <DependentUpon>Form_CuentasBancarias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario.resx">
       <DependentUpon>Formulario.vb</DependentUpon>

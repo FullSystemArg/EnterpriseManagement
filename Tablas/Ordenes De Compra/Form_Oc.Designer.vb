@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form4
+Partial Class Form_Oc
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class Form4
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Oc))
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.btn_Limpiar = New System.Windows.Forms.Button()
@@ -50,7 +50,7 @@ Partial Class Form4
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(435, 428)
+        Me.Button3.Location = New System.Drawing.Point(381, 425)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(57, 27)
         Me.Button3.TabIndex = 60
@@ -60,7 +60,7 @@ Partial Class Form4
         'btn_Buscar
         '
         Me.btn_Buscar.Image = CType(resources.GetObject("btn_Buscar.Image"), System.Drawing.Image)
-        Me.btn_Buscar.Location = New System.Drawing.Point(64, 409)
+        Me.btn_Buscar.Location = New System.Drawing.Point(57, 415)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Buscar.TabIndex = 59
@@ -69,7 +69,7 @@ Partial Class Form4
         'btn_Limpiar
         '
         Me.btn_Limpiar.Image = CType(resources.GetObject("btn_Limpiar.Image"), System.Drawing.Image)
-        Me.btn_Limpiar.Location = New System.Drawing.Point(15, 409)
+        Me.btn_Limpiar.Location = New System.Drawing.Point(15, 415)
         Me.btn_Limpiar.Name = "btn_Limpiar"
         Me.btn_Limpiar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Limpiar.TabIndex = 58
@@ -77,7 +77,7 @@ Partial Class Form4
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(299, 428)
+        Me.Button1.Location = New System.Drawing.Point(454, 425)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(63, 27)
         Me.Button1.TabIndex = 57
@@ -235,7 +235,7 @@ Partial Class Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(534, 454)
+        Me.ClientSize = New System.Drawing.Size(534, 459)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.Label13)

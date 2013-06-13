@@ -39,11 +39,11 @@ Partial Class Form_Ventas
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btn_Limpiar = New System.Windows.Forms.Button()
-        Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.btn_Buscar = New System.Windows.Forms.Button()
+        Me.btn_Limpiar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class Form_Ventas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 22)
+        Me.Label1.Location = New System.Drawing.Point(9, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 13)
         Me.Label1.TabIndex = 0
@@ -59,7 +59,7 @@ Partial Class Form_Ventas
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(59, 19)
+        Me.TextBox1.Location = New System.Drawing.Point(61, 25)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(156, 20)
         Me.TextBox1.TabIndex = 1
@@ -67,7 +67,7 @@ Partial Class Form_Ventas
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 58)
+        Me.Label2.Location = New System.Drawing.Point(9, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(80, 13)
         Me.Label2.TabIndex = 2
@@ -75,7 +75,7 @@ Partial Class Form_Ventas
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(93, 55)
+        Me.TextBox2.Location = New System.Drawing.Point(95, 61)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(135, 20)
         Me.TextBox2.TabIndex = 3
@@ -83,7 +83,7 @@ Partial Class Form_Ventas
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(7, 81)
+        Me.Label3.Location = New System.Drawing.Point(9, 87)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 13)
         Me.Label3.TabIndex = 4
@@ -91,7 +91,7 @@ Partial Class Form_Ventas
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(93, 81)
+        Me.TextBox3.Location = New System.Drawing.Point(95, 87)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(135, 20)
         Me.TextBox3.TabIndex = 5
@@ -99,7 +99,7 @@ Partial Class Form_Ventas
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(7, 133)
+        Me.Label4.Location = New System.Drawing.Point(9, 139)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 13)
         Me.Label4.TabIndex = 6
@@ -108,7 +108,7 @@ Partial Class Form_Ventas
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 104)
+        Me.Label5.Location = New System.Drawing.Point(9, 110)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(86, 13)
         Me.Label5.TabIndex = 8
@@ -116,7 +116,7 @@ Partial Class Form_Ventas
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(93, 104)
+        Me.TextBox4.Location = New System.Drawing.Point(95, 110)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(135, 20)
         Me.TextBox4.TabIndex = 9
@@ -124,7 +124,7 @@ Partial Class Form_Ventas
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 347)
+        Me.Label6.Location = New System.Drawing.Point(10, 202)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(78, 13)
         Me.Label6.TabIndex = 10
@@ -133,7 +133,7 @@ Partial Class Form_Ventas
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(95, 344)
+        Me.ComboBox2.Location = New System.Drawing.Point(98, 199)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(130, 21)
         Me.ComboBox2.TabIndex = 11
@@ -141,7 +141,7 @@ Partial Class Form_Ventas
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(10, 371)
+        Me.CheckBox1.Location = New System.Drawing.Point(13, 226)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(105, 17)
         Me.CheckBox1.TabIndex = 12
@@ -151,7 +151,7 @@ Partial Class Form_Ventas
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(123, 371)
+        Me.CheckBox2.Location = New System.Drawing.Point(126, 226)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(105, 17)
         Me.CheckBox2.TabIndex = 13
@@ -160,16 +160,16 @@ Partial Class Form_Ventas
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(123, 394)
+        Me.Button2.Location = New System.Drawing.Point(12, 259)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(57, 21)
+        Me.Button2.Size = New System.Drawing.Size(36, 37)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Imprimir"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(107, 130)
+        Me.TextBox5.Location = New System.Drawing.Point(109, 136)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(121, 20)
         Me.TextBox5.TabIndex = 16
@@ -197,60 +197,60 @@ Partial Class Form_Ventas
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(276, 450)
+        Me.GroupBox1.Size = New System.Drawing.Size(276, 307)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ventas"
         '
-        'DataGridView1
+        'Button3
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(302, 18)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(414, 443)
-        Me.DataGridView1.TabIndex = 31
+        Me.Button3.Location = New System.Drawing.Point(148, 275)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(59, 21)
+        Me.Button3.TabIndex = 32
+        Me.Button3.Text = "Eliminar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'btn_Buscar
+        '
+        Me.btn_Buscar.Image = CType(resources.GetObject("btn_Buscar.Image"), System.Drawing.Image)
+        Me.btn_Buscar.Location = New System.Drawing.Point(97, 259)
+        Me.btn_Buscar.Name = "btn_Buscar"
+        Me.btn_Buscar.Size = New System.Drawing.Size(36, 37)
+        Me.btn_Buscar.TabIndex = 31
+        Me.btn_Buscar.UseVisualStyleBackColor = True
+        '
+        'btn_Limpiar
+        '
+        Me.btn_Limpiar.Image = CType(resources.GetObject("btn_Limpiar.Image"), System.Drawing.Image)
+        Me.btn_Limpiar.Location = New System.Drawing.Point(55, 259)
+        Me.btn_Limpiar.Name = "btn_Limpiar"
+        Me.btn_Limpiar.Size = New System.Drawing.Size(36, 37)
+        Me.btn_Limpiar.TabIndex = 30
+        Me.btn_Limpiar.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(123, 418)
+        Me.Button1.Location = New System.Drawing.Point(213, 275)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(57, 21)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'btn_Limpiar
+        'DataGridView1
         '
-        Me.btn_Limpiar.Image = CType(resources.GetObject("btn_Limpiar.Image"), System.Drawing.Image)
-        Me.btn_Limpiar.Location = New System.Drawing.Point(10, 402)
-        Me.btn_Limpiar.Name = "btn_Limpiar"
-        Me.btn_Limpiar.Size = New System.Drawing.Size(36, 37)
-        Me.btn_Limpiar.TabIndex = 30
-        Me.btn_Limpiar.UseVisualStyleBackColor = True
-        '
-        'btn_Buscar
-        '
-        Me.btn_Buscar.Image = CType(resources.GetObject("btn_Buscar.Image"), System.Drawing.Image)
-        Me.btn_Buscar.Location = New System.Drawing.Point(59, 402)
-        Me.btn_Buscar.Name = "btn_Buscar"
-        Me.btn_Buscar.Size = New System.Drawing.Size(36, 37)
-        Me.btn_Buscar.TabIndex = 31
-        Me.btn_Buscar.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(186, 418)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(68, 21)
-        Me.Button3.TabIndex = 32
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(302, 18)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(512, 301)
+        Me.DataGridView1.TabIndex = 31
         '
         'Form_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(724, 467)
+        Me.ClientSize = New System.Drawing.Size(826, 332)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form_Ventas"
