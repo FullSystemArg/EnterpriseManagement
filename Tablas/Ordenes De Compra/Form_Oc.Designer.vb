@@ -231,7 +231,7 @@ Partial Class Form_Oc
         Me.DataGridView1.Size = New System.Drawing.Size(505, 280)
         Me.DataGridView1.TabIndex = 72
         '
-        'Form4
+        'Form_Oc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -258,7 +258,7 @@ Partial Class Form_Oc
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Name = "Form4"
+        Me.Name = "Form_Oc"
         Me.Text = "Form4"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
