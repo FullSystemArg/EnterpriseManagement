@@ -23,6 +23,7 @@
 
     'Variables para Articulos
     Public CadenaArticulos As String
+    Public ListadoActivo As Integer
 
     Public Sub Mensaje(ByVal Id As Integer)
         Select Case Id
@@ -42,6 +43,10 @@
                 Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla PROVEEDORES", vbInformation, "Enterprise Management")
             Case Is = 8
                 Msg = MsgBox("Se grabo correctamente el registro" & Tbnumero & " en la tabla PROVEEDORES", vbInformation, "Enterprise Management")
+            Case Is = 9
+                Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla ARTICULOS", vbOKCancel, "Enterprise Management")
+            Case Is = 10
+                Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla ARTICULOS", vbInformation, "Enterprise Management")
         End Select
     End Sub
 

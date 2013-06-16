@@ -235,7 +235,7 @@ Partial Class Form_Ventas
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(57, 21)
         Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Guardar"
+        Me.Button1.Text = "Grabar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'DataGridView1

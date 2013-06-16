@@ -271,14 +271,14 @@ Partial Class Form_Articulos
         '
         'tb_Barras
         '
-        Me.tb_Barras.Location = New System.Drawing.Point(117, 48)
+        Me.tb_Barras.Location = New System.Drawing.Point(117, 75)
         Me.tb_Barras.Name = "tb_Barras"
         Me.tb_Barras.Size = New System.Drawing.Size(151, 20)
         Me.tb_Barras.TabIndex = 34
         '
         'tb_Descripcion
         '
-        Me.tb_Descripcion.Location = New System.Drawing.Point(92, 74)
+        Me.tb_Descripcion.Location = New System.Drawing.Point(92, 49)
         Me.tb_Descripcion.Name = "tb_Descripcion"
         Me.tb_Descripcion.Size = New System.Drawing.Size(176, 20)
         Me.tb_Descripcion.TabIndex = 33
@@ -286,7 +286,7 @@ Partial Class Form_Articulos
         'lbl_Descripcion
         '
         Me.lbl_Descripcion.AutoSize = True
-        Me.lbl_Descripcion.Location = New System.Drawing.Point(23, 77)
+        Me.lbl_Descripcion.Location = New System.Drawing.Point(23, 52)
         Me.lbl_Descripcion.Name = "lbl_Descripcion"
         Me.lbl_Descripcion.Size = New System.Drawing.Size(63, 13)
         Me.lbl_Descripcion.TabIndex = 20
@@ -295,7 +295,7 @@ Partial Class Form_Articulos
         'lbl_Barra
         '
         Me.lbl_Barra.AutoSize = True
-        Me.lbl_Barra.Location = New System.Drawing.Point(23, 51)
+        Me.lbl_Barra.Location = New System.Drawing.Point(23, 78)
         Me.lbl_Barra.Name = "lbl_Barra"
         Me.lbl_Barra.Size = New System.Drawing.Size(88, 13)
         Me.lbl_Barra.TabIndex = 19

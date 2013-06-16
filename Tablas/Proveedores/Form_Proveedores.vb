@@ -71,7 +71,6 @@ Public Class Form_Proveedores
 #Region "ABM"
 
     Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar.Click
-        Tbnumero = tb_Numero.Text
         oConsultaProveedores.Eliminar_Proveedor(tb_Numero, DgD)
         PonerUltimoNumero()
         Limpiar_Campos()
