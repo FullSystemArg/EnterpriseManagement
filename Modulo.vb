@@ -6,6 +6,10 @@
     Public Int_VentanaProveedores_Proveedores As Integer = 0
     Public Int_VentanaProveedores_ConsultaProveedores As Integer = 0
     Public Int_VentanaStock_Articulos As Integer = 0
+    Public Int_VentanaOrdenes_Compra As Integer = 0
+    Public Int_VentanaVentas_Ventas As Integer = 0
+    Public Int_VentanaConversion_Cambiaria As Integer = 0
+    Public Int_VentanaAbout As Integer = 0
 
     'Variables para Proveedores
     Public ImeC As Integer
@@ -24,6 +28,14 @@
     'Variables para Articulos
     Public CadenaArticulos As String
     Public ListadoActivo As Integer
+    Public strCadena_Articulos As String
+    Public strAlta_Articulos As String
+    Public strMod_Articulos As String
+
+    'Variables para Compras
+    Public strCadena_Compras As String
+    Public strAlta_Compras As String
+    Public strMod_Compras As String
 
     Public Sub Mensaje(ByVal Id As Integer)
         Select Case Id
@@ -47,6 +59,16 @@
                 Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla ARTICULOS", vbOKCancel, "Enterprise Management")
             Case Is = 10
                 Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla ARTICULOS", vbInformation, "Enterprise Management")
+            Case Is = 11
+                Msg = MsgBox("Esta seguro que desea crear una Orden de compra para: " & Tbnumero & " en la tabla COMPRAS", vbOKCancel, "Enterprise Management")
+            Case Is = 12
+                Msg = MsgBox("Se grabo correctamente la Orden de compra para" & Tbnumero & " en la tabla COMPRAS", vbInformation, "Enterprise Management")
+            Case Is = 13
+                Msg = MsgBox("La Orden de Compra que intenta grabar ya existe", vbInformation, "Enterprise Management")
+            Case Is = 14
+                Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla COMPRAS", vbOKCancel, "Enterprise Management")
+            Case Is = 15
+                Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla COMPRAS", vbInformation, "Enterprise Management")
         End Select
     End Sub
 

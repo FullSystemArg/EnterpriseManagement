@@ -22,29 +22,29 @@ Partial Class Form_Conversion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DG_Monedas = New System.Windows.Forms.DataGridView()
+        CType(Me.DG_Monedas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DG_Monedas
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(451, 160)
-        Me.DataGridView1.TabIndex = 4
+        Me.DG_Monedas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DG_Monedas.Location = New System.Drawing.Point(12, 19)
+        Me.DG_Monedas.Name = "DG_Monedas"
+        Me.DG_Monedas.Size = New System.Drawing.Size(451, 160)
+        Me.DG_Monedas.TabIndex = 4
         '
-        'Form2
+        'Form_Conversion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(475, 190)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "Form2"
-        Me.Text = "Form2"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.Add(Me.DG_Monedas)
+        Me.Name = "Form_Conversion"
+        Me.Text = "Monedas"
+        CType(Me.DG_Monedas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DG_Monedas As System.Windows.Forms.DataGridView
 End Class

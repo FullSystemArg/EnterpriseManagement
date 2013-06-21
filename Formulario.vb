@@ -37,4 +37,48 @@
             Mensaje(1)
         End If
     End Sub
+
+    Private Sub VentasToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VentasToolStripMenuItem1.Click
+        Dim Frm_Ventas As New Form_Ventas
+        If Int_VentanaVentas_Ventas = 0 Then
+                Frm_Ventas.MdiParent = Me
+                Frm_Ventas.Show()
+                Int_VentanaVentas_Ventas = 1
+        Else
+                Mensaje(1)
+        End If
+    End Sub
+
+    Private Sub OrdenesDeCompraToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OrdenesDeCompraToolStripMenuItem.Click
+        Dim frm_OC As New Form_Oc
+        If Int_VentanaOrdenes_Compra = 0 Then
+            frm_OC.MdiParent = Me
+            frm_OC.Show()
+            Int_VentanaOrdenes_Compra = 1
+        Else
+            Mensaje(1)
+        End If
+    End Sub
+
+    Private Sub ODBCToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ODBCToolStripMenuItem.Click
+        Dim frm_Monedas As New Form_Conversion
+        If Int_VentanaConversion_Cambiaria = 0 Then
+            frm_Monedas.MdiParent = Me
+            frm_Monedas.Show()
+            Int_VentanaConversion_Cambiaria = 1
+        Else
+            Mensaje(1)
+        End If
+    End Sub
+
+    Private Sub AcercaDeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AcercaDeToolStripMenuItem.Click
+        Dim frm_About As New About
+        If Int_VentanaAbout = 0 Then
+            frm_About.MdiParent = Me
+            frm_About.Show()
+            Int_VentanaAbout = 1
+        Else
+            Mensaje(1)
+        End If
+    End Sub
 End Class

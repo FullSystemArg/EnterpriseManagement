@@ -29,19 +29,17 @@ Partial Class Formulario
         Me.ProveedoresToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdenesDeCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArticulosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AltaDeStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AdministracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HerramientasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImpresionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ODBCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguraciónDeUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VisorDeActividadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TemasDeAyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,7 +54,7 @@ Partial Class Formulario
         '
         'TablasToolStripMenuItem
         '
-        Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.VentasToolStripMenuItem, Me.StockToolStripMenuItem, Me.AdministracionToolStripMenuItem})
+        Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.VentasToolStripMenuItem, Me.StockToolStripMenuItem})
         Me.TablasToolStripMenuItem.Name = "TablasToolStripMenuItem"
         Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.TablasToolStripMenuItem.Text = "Tablas"
@@ -82,13 +80,26 @@ Partial Class Formulario
         '
         'VentasToolStripMenuItem
         '
+        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem1, Me.OrdenesDeCompraToolStripMenuItem})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
         Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
+        'VentasToolStripMenuItem1
+        '
+        Me.VentasToolStripMenuItem1.Name = "VentasToolStripMenuItem1"
+        Me.VentasToolStripMenuItem1.Size = New System.Drawing.Size(170, 22)
+        Me.VentasToolStripMenuItem1.Text = "Ventas"
+        '
+        'OrdenesDeCompraToolStripMenuItem
+        '
+        Me.OrdenesDeCompraToolStripMenuItem.Name = "OrdenesDeCompraToolStripMenuItem"
+        Me.OrdenesDeCompraToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.OrdenesDeCompraToolStripMenuItem.Text = "Ordenes de Compra"
+        '
         'StockToolStripMenuItem
         '
-        Me.StockToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArticulosToolStripMenuItem, Me.AltaDeStockToolStripMenuItem})
+        Me.StockToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArticulosToolStripMenuItem})
         Me.StockToolStripMenuItem.Name = "StockToolStripMenuItem"
         Me.StockToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StockToolStripMenuItem.Text = "Stock"
@@ -96,24 +107,12 @@ Partial Class Formulario
         'ArticulosToolStripMenuItem
         '
         Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
-        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.ArticulosToolStripMenuItem.Text = "Articulos"
-        '
-        'AltaDeStockToolStripMenuItem
-        '
-        Me.AltaDeStockToolStripMenuItem.Name = "AltaDeStockToolStripMenuItem"
-        Me.AltaDeStockToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AltaDeStockToolStripMenuItem.Text = "Consulta Stock"
-        '
-        'AdministracionToolStripMenuItem
-        '
-        Me.AdministracionToolStripMenuItem.Name = "AdministracionToolStripMenuItem"
-        Me.AdministracionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AdministracionToolStripMenuItem.Text = "Administracion"
         '
         'HerramientasToolStripMenuItem
         '
-        Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImpresionesToolStripMenuItem, Me.BackupToolStripMenuItem, Me.ODBCToolStripMenuItem, Me.ConfiguraciónDeUsuariosToolStripMenuItem, Me.VisorDeActividadesToolStripMenuItem})
+        Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImpresionesToolStripMenuItem, Me.BackupToolStripMenuItem, Me.ODBCToolStripMenuItem, Me.ConfiguraciónDeUsuariosToolStripMenuItem})
         Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
         Me.HerramientasToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
         Me.HerramientasToolStripMenuItem.Text = "Herramientas"
@@ -134,7 +133,7 @@ Partial Class Formulario
         '
         Me.ODBCToolStripMenuItem.Name = "ODBCToolStripMenuItem"
         Me.ODBCToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.ODBCToolStripMenuItem.Text = "ODBC"
+        Me.ODBCToolStripMenuItem.Text = "Monedas"
         '
         'ConfiguraciónDeUsuariosToolStripMenuItem
         '
@@ -142,15 +141,9 @@ Partial Class Formulario
         Me.ConfiguraciónDeUsuariosToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.ConfiguraciónDeUsuariosToolStripMenuItem.Text = "Configuración de Usuarios"
         '
-        'VisorDeActividadesToolStripMenuItem
-        '
-        Me.VisorDeActividadesToolStripMenuItem.Name = "VisorDeActividadesToolStripMenuItem"
-        Me.VisorDeActividadesToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.VisorDeActividadesToolStripMenuItem.Text = "Visor De Actividades"
-        '
         'AyudaToolStripMenuItem
         '
-        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeToolStripMenuItem, Me.TemasDeAyudaToolStripMenuItem})
+        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
@@ -158,14 +151,8 @@ Partial Class Formulario
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de..."
-        '
-        'TemasDeAyudaToolStripMenuItem
-        '
-        Me.TemasDeAyudaToolStripMenuItem.Name = "TemasDeAyudaToolStripMenuItem"
-        Me.TemasDeAyudaToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.TemasDeAyudaToolStripMenuItem.Text = "Temas De Ayuda"
         '
         'Formulario
         '
@@ -192,17 +179,15 @@ Partial Class Formulario
     Friend WithEvents ProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AdministracionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ImpresionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BackupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ODBCToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfiguraciónDeUsuariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents VisorDeActividadesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TemasDeAyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultaProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ArticulosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AltaDeStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VentasToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OrdenesDeCompraToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
