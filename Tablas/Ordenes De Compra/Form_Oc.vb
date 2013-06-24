@@ -38,8 +38,8 @@
             Tbnumero = cb_Articulo.Text
             strAlta_Compras = "INSERT INTO PROVEEDORES " _
                                         & "(Codigo, Cantidad, Fecha, Proveedor, Precio, Entrega, Cliente, Moneda, Cotizacion) VALUES " _
-                                        & "('" & Trim(cb_Articulo.Text) & "'," & Val(tb_Cantidad.Text) & ",'" & CDate(tb_Fecha.Text) & "','" _
-                                        & Trim(cb_Proveedor.Text) & "'," & Val(tb_Precio.Text) & ",'" & CDate(tb_Entrega.Text) & ",'" _
+                                        & "('" & Trim(cb_Articulo.Text) & "'," & Val(tb_Cantidad.Text) & ",'" & Trim(tb_Fecha.Text) & "','" _
+                                        & Trim(cb_Proveedor.Text) & "'," & CDbl(tb_Precio.Text) & ",'" & Trim(tb_Entrega.Text) & ",'" _
                                         & Trim(tb_Cliente.Text) & ",'" & Trim(cb_Moneda.Text) & "," & Val(tb_Cotizacion.Text) & ");"
             oCompras.Grabar_Orden(DG_Ordenes, DgD, cb_Articulo)
         Else
@@ -48,7 +48,7 @@
     End Sub
 
     Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar.Click
-        oCompras.Eliminar_Orden(cb_Articulo, DgD)
+        oCompras.Eliminar_Orden(cb_Articulo, DgD, DG_Ordenes)
     End Sub
 
     Private Sub cb_Moneda_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cb_Moneda.SelectedIndexChanged
@@ -71,7 +71,7 @@
     End Sub
 
     Private Sub tb_Precio_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tb_Precio.KeyPress
-        If Not IsNumeric(e.KeyChar) And e.KeyChar <> Chr(8) Then e.KeyChar = String.Empty
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> Chr(8) And e.KeyChar <> "," And e.KeyChar <> "." Then e.KeyChar = String.Empty
     End Sub
 #End Region
 

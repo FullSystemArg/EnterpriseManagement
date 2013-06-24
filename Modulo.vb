@@ -31,11 +31,17 @@
     Public strCadena_Articulos As String
     Public strAlta_Articulos As String
     Public strMod_Articulos As String
+    Public strAlta_Stock As String
 
     'Variables para Compras
     Public strCadena_Compras As String
     Public strAlta_Compras As String
     Public strMod_Compras As String
+
+    'Variables para Ventas
+    Public strCadena_Ventas As String
+    Public strAlta_Ventas As String
+    Public strMod_Ventas As String
 
     Public Sub Mensaje(ByVal Id As Integer)
         Select Case Id
@@ -69,6 +75,10 @@
                 Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla COMPRAS", vbOKCancel, "Enterprise Management")
             Case Is = 15
                 Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla COMPRAS", vbInformation, "Enterprise Management")
+            Case Is = 16
+                Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla Ventas", vbOKCancel, "Enterprise Management")
+            Case Is = 17
+                Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla Ventas", vbInformation, "Enterprise Management")
         End Select
     End Sub
 

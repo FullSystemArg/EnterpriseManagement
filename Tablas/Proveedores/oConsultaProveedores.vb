@@ -4,6 +4,13 @@ Public Class oConsultaProveedores
 
 #Region "Consultas"
 
+    Shared Sub CargarDD_Razon(ByVal DD As ComboBox)
+        DD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, "Select RAZON From PROVEEDORES").Tables(0)
+        DD.DisplayMember = "RAZON"
+        DD.ValueMember = "RAZON"
+        DD.Text = ""
+    End Sub
+
     Shared Sub CargarDD_Codigo(ByVal DD As ComboBox)
         DD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, "Select NUM_PROV From PROVEEDORES").Tables(0)
         DD.DisplayMember = "NUM_PROV"
@@ -42,8 +49,8 @@ Public Class oConsultaProveedores
             If DgD.Rows.Count > 0 Then
                 Mensaje(6)
                 If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "Delete From PROVEEDORES Where NUM_PROV = '" & Trim(Tnumero.Text) & "'")
+                Mensaje(7)
             End If
-            Mensaje(7)
         Else
             Mensaje(3)
         End If
@@ -52,14 +59,15 @@ Public Class oConsultaProveedores
     Shared Sub Grabar_Proveedor(ByVal DgD As DataGridView)
         LimpiarDG(DgD)
         DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, strCadena_Proveedor).Tables(0)
-        If DgD.Rows.Count > 0 Then
+        If DgD.Rows.Count = 0 Then
             Mensaje(4)
             If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strAlta_Proveedor)
+            Mensaje(8)
         Else
             Mensaje(5)
             If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strMod_Proveedor)
+            Mensaje(8)
         End If
-        Mensaje(8)
     End Sub
 
 #End Region

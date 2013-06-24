@@ -24,13 +24,16 @@ Partial Class Form_Articulos
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Articulos))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.tb_Descripcion = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cb_Id = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.cb_Articulo = New System.Windows.Forms.ComboBox()
         Me.cb_Proveedor = New System.Windows.Forms.ComboBox()
-        Me.tb_Moneda = New System.Windows.Forms.ComboBox()
+        Me.cb_Moneda = New System.Windows.Forms.ComboBox()
         Me.btn_Clear = New System.Windows.Forms.Button()
         Me.btn_Alta = New System.Windows.Forms.Button()
-        Me.tb_Origen = New System.Windows.Forms.TextBox()
-        Me.tb_Destino = New System.Windows.Forms.TextBox()
+        Me.tb_Cantidad = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.tb_Fecha = New System.Windows.Forms.TextBox()
@@ -58,7 +61,6 @@ Partial Class Form_Articulos
         Me.btn_Limpiar = New System.Windows.Forms.Button()
         Me.btn_Eliminar_Articulo = New System.Windows.Forms.Button()
         Me.tb_Barras = New System.Windows.Forms.TextBox()
-        Me.tb_Descripcion = New System.Windows.Forms.TextBox()
         Me.lbl_Descripcion = New System.Windows.Forms.Label()
         Me.lbl_Barra = New System.Windows.Forms.Label()
         Me.lbl_Fabricante = New System.Windows.Forms.Label()
@@ -76,6 +78,7 @@ Partial Class Form_Articulos
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.tb_Descripcion)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.cb_Codigo)
         Me.Panel1.Controls.Add(Me.Panel3)
@@ -84,7 +87,6 @@ Partial Class Form_Articulos
         Me.Panel1.Controls.Add(Me.btn_Limpiar)
         Me.Panel1.Controls.Add(Me.btn_Eliminar_Articulo)
         Me.Panel1.Controls.Add(Me.tb_Barras)
-        Me.Panel1.Controls.Add(Me.tb_Descripcion)
         Me.Panel1.Controls.Add(Me.lbl_Descripcion)
         Me.Panel1.Controls.Add(Me.lbl_Barra)
         Me.Panel1.Controls.Add(Me.lbl_Fabricante)
@@ -93,15 +95,25 @@ Partial Class Form_Articulos
         Me.Panel1.Size = New System.Drawing.Size(287, 503)
         Me.Panel1.TabIndex = 18
         '
+        'tb_Descripcion
+        '
+        Me.tb_Descripcion.FormattingEnabled = True
+        Me.tb_Descripcion.Location = New System.Drawing.Point(92, 49)
+        Me.tb_Descripcion.Name = "tb_Descripcion"
+        Me.tb_Descripcion.Size = New System.Drawing.Size(178, 21)
+        Me.tb_Descripcion.TabIndex = 41
+        '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.cb_Id)
+        Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Controls.Add(Me.cb_Articulo)
         Me.Panel2.Controls.Add(Me.cb_Proveedor)
-        Me.Panel2.Controls.Add(Me.tb_Moneda)
+        Me.Panel2.Controls.Add(Me.cb_Moneda)
         Me.Panel2.Controls.Add(Me.btn_Clear)
         Me.Panel2.Controls.Add(Me.btn_Alta)
-        Me.Panel2.Controls.Add(Me.tb_Origen)
-        Me.Panel2.Controls.Add(Me.tb_Destino)
+        Me.Panel2.Controls.Add(Me.tb_Cantidad)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.tb_Fecha)
@@ -113,21 +125,46 @@ Partial Class Form_Articulos
         Me.Panel2.Size = New System.Drawing.Size(287, 155)
         Me.Panel2.TabIndex = 40
         '
+        'cb_Id
+        '
+        Me.cb_Id.FormattingEnabled = True
+        Me.cb_Id.Location = New System.Drawing.Point(46, 24)
+        Me.cb_Id.Name = "cb_Id"
+        Me.cb_Id.Size = New System.Drawing.Size(45, 21)
+        Me.cb_Id.TabIndex = 56
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(27, 27)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(16, 13)
+        Me.Label12.TabIndex = 55
+        Me.Label12.Text = "Id"
+        '
+        'cb_Articulo
+        '
+        Me.cb_Articulo.FormattingEnabled = True
+        Me.cb_Articulo.Location = New System.Drawing.Point(66, 80)
+        Me.cb_Articulo.Name = "cb_Articulo"
+        Me.cb_Articulo.Size = New System.Drawing.Size(72, 21)
+        Me.cb_Articulo.TabIndex = 54
+        '
         'cb_Proveedor
         '
         Me.cb_Proveedor.FormattingEnabled = True
-        Me.cb_Proveedor.Location = New System.Drawing.Point(85, 25)
+        Me.cb_Proveedor.Location = New System.Drawing.Point(159, 24)
         Me.cb_Proveedor.Name = "cb_Proveedor"
-        Me.cb_Proveedor.Size = New System.Drawing.Size(176, 21)
+        Me.cb_Proveedor.Size = New System.Drawing.Size(113, 21)
         Me.cb_Proveedor.TabIndex = 53
         '
-        'tb_Moneda
+        'cb_Moneda
         '
-        Me.tb_Moneda.FormattingEnabled = True
-        Me.tb_Moneda.Location = New System.Drawing.Point(207, 50)
-        Me.tb_Moneda.Name = "tb_Moneda"
-        Me.tb_Moneda.Size = New System.Drawing.Size(54, 21)
-        Me.tb_Moneda.TabIndex = 52
+        Me.cb_Moneda.FormattingEnabled = True
+        Me.cb_Moneda.Location = New System.Drawing.Point(218, 54)
+        Me.cb_Moneda.Name = "cb_Moneda"
+        Me.cb_Moneda.Size = New System.Drawing.Size(54, 21)
+        Me.cb_Moneda.TabIndex = 52
         '
         'btn_Clear
         '
@@ -147,24 +184,17 @@ Partial Class Form_Articulos
         Me.btn_Alta.Text = "Alta"
         Me.btn_Alta.UseVisualStyleBackColor = True
         '
-        'tb_Origen
+        'tb_Cantidad
         '
-        Me.tb_Origen.Location = New System.Drawing.Point(65, 77)
-        Me.tb_Origen.Name = "tb_Origen"
-        Me.tb_Origen.Size = New System.Drawing.Size(70, 20)
-        Me.tb_Origen.TabIndex = 49
-        '
-        'tb_Destino
-        '
-        Me.tb_Destino.Location = New System.Drawing.Point(190, 77)
-        Me.tb_Destino.Name = "tb_Destino"
-        Me.tb_Destino.Size = New System.Drawing.Size(71, 20)
-        Me.tb_Destino.TabIndex = 48
+        Me.tb_Cantidad.Location = New System.Drawing.Point(201, 81)
+        Me.tb_Cantidad.Name = "tb_Cantidad"
+        Me.tb_Cantidad.Size = New System.Drawing.Size(71, 20)
+        Me.tb_Cantidad.TabIndex = 48
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(141, 80)
+        Me.Label9.Location = New System.Drawing.Point(152, 84)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(49, 13)
         Me.Label9.TabIndex = 47
@@ -173,7 +203,7 @@ Partial Class Form_Articulos
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(23, 80)
+        Me.Label10.Location = New System.Drawing.Point(23, 84)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(42, 13)
         Me.Label10.TabIndex = 46
@@ -189,7 +219,7 @@ Partial Class Form_Articulos
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(155, 54)
+        Me.Label6.Location = New System.Drawing.Point(166, 58)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(46, 13)
         Me.Label6.TabIndex = 42
@@ -207,7 +237,7 @@ Partial Class Form_Articulos
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(23, 28)
+        Me.Label8.Location = New System.Drawing.Point(97, 27)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 40
@@ -398,13 +428,6 @@ Partial Class Form_Articulos
         Me.tb_Barras.Size = New System.Drawing.Size(151, 20)
         Me.tb_Barras.TabIndex = 34
         '
-        'tb_Descripcion
-        '
-        Me.tb_Descripcion.Location = New System.Drawing.Point(92, 49)
-        Me.tb_Descripcion.Name = "tb_Descripcion"
-        Me.tb_Descripcion.Size = New System.Drawing.Size(176, 20)
-        Me.tb_Descripcion.TabIndex = 33
-        '
         'lbl_Descripcion
         '
         Me.lbl_Descripcion.AutoSize = True
@@ -502,7 +525,6 @@ Partial Class Form_Articulos
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents tb_Barras As System.Windows.Forms.TextBox
-    Friend WithEvents tb_Descripcion As System.Windows.Forms.TextBox
     Friend WithEvents lbl_Descripcion As System.Windows.Forms.Label
     Friend WithEvents lbl_Barra As System.Windows.Forms.Label
     Friend WithEvents lbl_Fabricante As System.Windows.Forms.Label
@@ -529,11 +551,10 @@ Partial Class Form_Articulos
     Friend WithEvents cb_Codigo As System.Windows.Forms.ComboBox
     Friend WithEvents DG_Articulos As System.Windows.Forms.DataGridView
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents tb_Moneda As System.Windows.Forms.ComboBox
+    Friend WithEvents cb_Moneda As System.Windows.Forms.ComboBox
     Friend WithEvents btn_Clear As System.Windows.Forms.Button
     Friend WithEvents btn_Alta As System.Windows.Forms.Button
-    Friend WithEvents tb_Origen As System.Windows.Forms.TextBox
-    Friend WithEvents tb_Destino As System.Windows.Forms.TextBox
+    Friend WithEvents tb_Cantidad As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents tb_Fecha As System.Windows.Forms.TextBox
@@ -542,4 +563,8 @@ Partial Class Form_Articulos
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cb_Proveedor As System.Windows.Forms.ComboBox
     Friend WithEvents DgD As System.Windows.Forms.DataGridView
+    Friend WithEvents cb_Articulo As System.Windows.Forms.ComboBox
+    Friend WithEvents tb_Descripcion As System.Windows.Forms.ComboBox
+    Friend WithEvents cb_Id As System.Windows.Forms.ComboBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 End Class

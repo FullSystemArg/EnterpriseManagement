@@ -35,6 +35,7 @@ Partial Class Form_Ventas
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cb_Forma = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.tb_Precio = New System.Windows.Forms.TextBox()
@@ -56,11 +57,12 @@ Partial Class Form_Ventas
         Me.DG_Ventas = New System.Windows.Forms.DataGridView()
         Me.btn_Eliminar = New System.Windows.Forms.Button()
         Me.btn_Buscar = New System.Windows.Forms.Button()
-        Me.btn_Imprimir = New System.Windows.Forms.Button()
         Me.btn_Limpiar = New System.Windows.Forms.Button()
         Me.btn_Grabar = New System.Windows.Forms.Button()
+        Me.DgD = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DG_Ventas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -98,7 +100,7 @@ Partial Class Form_Ventas
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(39, 80)
+        Me.Label3.Location = New System.Drawing.Point(39, 83)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 13)
         Me.Label3.TabIndex = 4
@@ -156,6 +158,7 @@ Partial Class Form_Ventas
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.tb_Precio)
@@ -191,6 +194,13 @@ Partial Class Form_Ventas
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ventas"
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(261, 54)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 33
+        Me.MonthCalendar1.Visible = False
         '
         'Label14
         '
@@ -357,9 +367,12 @@ Partial Class Form_Ventas
         '
         'DG_Ventas
         '
+        Me.DG_Ventas.AllowUserToAddRows = False
+        Me.DG_Ventas.AllowUserToDeleteRows = False
         Me.DG_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DG_Ventas.Location = New System.Drawing.Point(12, 254)
         Me.DG_Ventas.Name = "DG_Ventas"
+        Me.DG_Ventas.ReadOnly = True
         Me.DG_Ventas.Size = New System.Drawing.Size(550, 301)
         Me.DG_Ventas.TabIndex = 31
         '
@@ -375,24 +388,16 @@ Partial Class Form_Ventas
         'btn_Buscar
         '
         Me.btn_Buscar.Image = CType(resources.GetObject("btn_Buscar.Image"), System.Drawing.Image)
-        Me.btn_Buscar.Location = New System.Drawing.Point(92, 561)
+        Me.btn_Buscar.Location = New System.Drawing.Point(50, 561)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Buscar.TabIndex = 14
         Me.btn_Buscar.UseVisualStyleBackColor = True
         '
-        'btn_Imprimir
-        '
-        Me.btn_Imprimir.Location = New System.Drawing.Point(12, 561)
-        Me.btn_Imprimir.Name = "btn_Imprimir"
-        Me.btn_Imprimir.Size = New System.Drawing.Size(36, 37)
-        Me.btn_Imprimir.TabIndex = 16
-        Me.btn_Imprimir.UseVisualStyleBackColor = True
-        '
         'btn_Limpiar
         '
         Me.btn_Limpiar.Image = CType(resources.GetObject("btn_Limpiar.Image"), System.Drawing.Image)
-        Me.btn_Limpiar.Location = New System.Drawing.Point(54, 561)
+        Me.btn_Limpiar.Location = New System.Drawing.Point(12, 561)
         Me.btn_Limpiar.Name = "btn_Limpiar"
         Me.btn_Limpiar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Limpiar.TabIndex = 17
@@ -407,23 +412,37 @@ Partial Class Form_Ventas
         Me.btn_Grabar.Text = "Grabar"
         Me.btn_Grabar.UseVisualStyleBackColor = True
         '
+        'DgD
+        '
+        Me.DgD.AllowUserToAddRows = False
+        Me.DgD.AllowUserToDeleteRows = False
+        Me.DgD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgD.Location = New System.Drawing.Point(218, 594)
+        Me.DgD.Name = "DgD"
+        Me.DgD.ReadOnly = True
+        Me.DgD.Size = New System.Drawing.Size(13, 16)
+        Me.DgD.TabIndex = 32
+        Me.DgD.Visible = False
+        '
         'Form_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(574, 605)
+        Me.Controls.Add(Me.DgD)
         Me.Controls.Add(Me.btn_Eliminar)
         Me.Controls.Add(Me.btn_Buscar)
-        Me.Controls.Add(Me.btn_Imprimir)
         Me.Controls.Add(Me.btn_Limpiar)
         Me.Controls.Add(Me.btn_Grabar)
         Me.Controls.Add(Me.DG_Ventas)
         Me.Controls.Add(Me.GroupBox1)
+        Me.KeyPreview = True
         Me.Name = "Form_Ventas"
         Me.Text = "Ventas"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DG_Ventas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -444,7 +463,6 @@ Partial Class Form_Ventas
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btn_Eliminar As System.Windows.Forms.Button
     Friend WithEvents btn_Buscar As System.Windows.Forms.Button
-    Friend WithEvents btn_Imprimir As System.Windows.Forms.Button
     Friend WithEvents btn_Limpiar As System.Windows.Forms.Button
     Friend WithEvents btn_Grabar As System.Windows.Forms.Button
     Friend WithEvents cb_Origen As System.Windows.Forms.ComboBox
@@ -463,4 +481,6 @@ Partial Class Form_Ventas
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents tb_Precio As System.Windows.Forms.TextBox
+    Friend WithEvents DgD As System.Windows.Forms.DataGridView
+    Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
 End Class

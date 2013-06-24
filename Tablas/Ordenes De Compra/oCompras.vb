@@ -16,7 +16,7 @@
         If Tnumero.Text <> "" Then
             LimpiarDG(DgD)
             DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select Codigo from COMPRAS where Codigo = " & Trim(Tnumero.Text))).Tables(0)
-            If DgD.Rows.Count > 0 Then
+            If DgD.Rows.Count = 0 Then
                 Mensaje(11)
                 If Msg = vbOK Then
                     SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strAlta_Compras)
@@ -31,13 +31,14 @@
         End If
     End Sub
 
-    Shared Sub Eliminar_Orden(ByVal Tnumero As ComboBox, ByVal DgD As DataGridView)
+    Shared Sub Eliminar_Orden(ByVal Tnumero As ComboBox, ByVal DgD As DataGridView, ByVal DG As DataGridView)
         If Tnumero.Text <> "" Then
             LimpiarDG(DgD)
-            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select Codigo from COMPRAS where Codigo = " & Trim(Tnumero.Text))).Tables(0)
+            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select Codigo from COMPRAS where Codigo = '" & Trim(Tnumero.Text) & "'")).Tables(0)
             If DgD.Rows.Count > 0 Then
                 Mensaje(14)
                 If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "Delete From COMPRAS Where Codigo = '" & Trim(Tnumero.Text) & "'")
+                CargarDG_Ordenes(DG)
             End If
             Mensaje(15)
         Else
