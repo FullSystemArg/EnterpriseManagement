@@ -6,10 +6,10 @@
         If Msg = vbOK Then
             SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strAlta_Stock)
             Mensaje(12)
-            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select DESCRIP_ARTI from ARTICULOS where DESCRIP_ARTI = '" & Trim(Tnumero.Text) & "'")).Tables(0)
-            If DgD.Rows.Count > 0 Then
-                'SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "INSERT INTO ARTICULOS VALUES " & "(CANT_STOCK) VALUES " & "('" & Trim(cb_Codigo.Text) & ");")
-            End If
+            'DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select DESCRIP_ARTI from ARTICULOS where DESCRIP_ARTI = '" & Trim(Tnumero.Text) & "'")).Tables(0)
+            'If DgD.Rows.Count > 0 Then
+            '    'SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "INSERT INTO ARTICULOS VALUES " & "(CANT_STOCK) VALUES " & "('" & Trim(cb_Codigo.Text) & ");")
+            'End If
         End If
     End Sub
 

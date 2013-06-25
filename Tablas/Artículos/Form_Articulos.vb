@@ -148,9 +148,9 @@
         If cb_Id.Text <> "" Then
             Tbnumero = cb_Articulo.Text
             strAlta_Stock = "INSERT INTO PROVEEDORES " _
-                                & "(Proveedor, Fecha, Moneda, Articulo, Cantidad, Id) VALUES " _
-                                & "('" & Trim(cb_Proveedor.Text) & "','" & CDate(tb_Fecha.Text) & "','" & Trim(cb_Moneda.Text) & "','" _
-                                & Trim(cb_Articulo.Text) & "'," & Val(tb_Cantidad.Text) & "," & Val(cb_Id.Text) & ");"
+                                & "(Id, Proveedor, Fecha, Moneda, Articulo, Cantidad) VALUES " _
+                                & "('" & Val(cb_Id.Text) & ",'" & Trim(cb_Proveedor.Text) & "','" & Trim(tb_Fecha.Text) & "','" & Trim(cb_Moneda.Text) & "','" _
+                                & Trim(cb_Articulo.Text) & "'," & Val(tb_Cantidad.Text) & ");"
             oArticulos.AltaStock(DgD, cb_Articulo)
         Else
             Mensaje(3)
