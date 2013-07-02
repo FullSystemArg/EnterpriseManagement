@@ -147,7 +147,7 @@ Partial Class Form_Articulos
         Me.cb_Articulo.FormattingEnabled = True
         Me.cb_Articulo.Location = New System.Drawing.Point(66, 80)
         Me.cb_Articulo.Name = "cb_Articulo"
-        Me.cb_Articulo.Size = New System.Drawing.Size(72, 21)
+        Me.cb_Articulo.Size = New System.Drawing.Size(123, 21)
         Me.cb_Articulo.TabIndex = 54
         '
         'cb_Proveedor
@@ -186,15 +186,15 @@ Partial Class Form_Articulos
         '
         'tb_Cantidad
         '
-        Me.tb_Cantidad.Location = New System.Drawing.Point(201, 81)
+        Me.tb_Cantidad.Location = New System.Drawing.Point(246, 81)
         Me.tb_Cantidad.Name = "tb_Cantidad"
-        Me.tb_Cantidad.Size = New System.Drawing.Size(71, 20)
+        Me.tb_Cantidad.Size = New System.Drawing.Size(26, 20)
         Me.tb_Cantidad.TabIndex = 48
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(152, 84)
+        Me.Label9.Location = New System.Drawing.Point(191, 83)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(49, 13)
         Me.Label9.TabIndex = 47
