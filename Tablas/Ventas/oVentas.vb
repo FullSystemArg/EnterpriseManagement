@@ -12,8 +12,10 @@
                 Mensaje(16)
                 If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "Delete From Ventas Where Id = " & Val(Tnumero.Text))
                 CargarDG_Ventas(DG)
+                Mensaje(17)
+            Else
+                Mensaje(18)
             End If
-            Mensaje(17)
         Else
             Mensaje(3)
         End If

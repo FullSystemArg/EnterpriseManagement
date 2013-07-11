@@ -141,7 +141,7 @@
             Tbnumero = tb_Operacion.Text
             If Trim(tb_Precio.Text) = "" Then tb_Precio.Text = "0"
             If Trim(tb_Costo.Text) = "" Then tb_Costo.Text = "0"
-                strCadena_Ventas = ("Select Id from Ventas where Id = " & Val(tb_Operacion.Text))
+            strCadena_Ventas = ("Select Id from Ventas where Id = " & Val(tb_Operacion.Text))
             strAlta_Ventas = "INSERT INTO Ventas " _
                                         & "(Id, Fecha, Garantia, Facturacion, Origen, Forma, Envio, Cantidad, Codigo, Articulo, Precio, Costo, Ganancia) VALUES " _
                                         & "(" & Val(tb_Operacion.Text) & ",'" & Trim(tb_Fecha.Text) & "'," & Val(tb_Garantia.Text) _

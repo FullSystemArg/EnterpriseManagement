@@ -50,7 +50,7 @@
             Case Is = 2
                 Msg = MsgBox("Se va a borrar la cuenta especificada ¿Desea Continuar?", vbOKCancel, "Enterprise Management")
             Case Is = 3
-                Msg = MsgBox("Debe ingresar un número de Proveedor para grabar o eliminar un registro", vbExclamation, "Enterprise Management")
+                Msg = MsgBox("Debe ingresar un número de operacion para grabar o eliminar un registro", vbExclamation, "Enterprise Management")
             Case Is = 4
                 Msg = MsgBox("Esta seguro que desea modificar el Registro: " & Tbnumero & " de la tabla PROVEEDORES", vbOKCancel, "Enterprise Management")
             Case Is = 5
@@ -79,6 +79,8 @@
                 Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla Ventas", vbOKCancel, "Enterprise Management")
             Case Is = 17
                 Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla Ventas", vbInformation, "Enterprise Management")
+            Case Is = 18
+                Msg = MsgBox("El registro Especificado no existe", vbInformation, "Enterprise Management")
         End Select
     End Sub
 
