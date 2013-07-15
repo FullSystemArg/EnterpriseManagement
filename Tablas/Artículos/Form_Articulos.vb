@@ -9,6 +9,7 @@
 
     Private Sub Form_Articulos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         oArticulos.CargarDD_Codigo(cb_Codigo)
+        oArticulos.CargarDD_IdStock(cb_Id)
         oConsultaProveedores.CargarDD_Razon(cb_Proveedor)
         oArticulos.CargarDD_Monedas(cb_Moneda)
         oArticulos.CargarDD_Codigo(cb_Articulo)
@@ -149,7 +150,7 @@
             Tbnumero = cb_Articulo.Text
             strAlta_Stock = "INSERT INTO Stock" _
                                 & "(Id, Proveedor, Fecha, Moneda, Articulo, Cantidad) VALUES " _
-                                & "('" & Val(cb_Id.Text) & ",'" & Trim(cb_Proveedor.Text) & "','" & Trim(tb_Fecha.Text) & "','" & Trim(cb_Moneda.Text) & "','" _
+                                & "(" & Val(cb_Id.Text) & ",'" & Trim(cb_Proveedor.Text) & "','" & Trim(tb_Fecha.Text) & "','" & Trim(cb_Moneda.Text) & "','" _
                                 & Trim(cb_Articulo.Text) & "'," & Val(tb_Cantidad.Text) & ");"
             oArticulos.AltaStock(cb_Articulo.Text, tb_Cantidad.Text)
         Else
