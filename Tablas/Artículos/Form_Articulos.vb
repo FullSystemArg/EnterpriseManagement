@@ -11,7 +11,7 @@
         oArticulos.CargarDD_Codigo(cb_Codigo)
         oConsultaProveedores.CargarDD_Razon(cb_Proveedor)
         oArticulos.CargarDD_Monedas(cb_Moneda)
-        oArticulos.CargarDD_Articulo(cb_Articulo)
+        oArticulos.CargarDD_Codigo(cb_Articulo)
         oArticulos.CargarDD_Articulo(tb_Descripcion)
     End Sub
 
@@ -147,11 +147,11 @@
     Private Sub btn_Alta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Alta.Click
         If cb_Id.Text <> "" Then
             Tbnumero = cb_Articulo.Text
-            strAlta_Stock = "INSERT INTO PROVEEDORES " _
+            strAlta_Stock = "INSERT INTO Stock" _
                                 & "(Id, Proveedor, Fecha, Moneda, Articulo, Cantidad) VALUES " _
                                 & "('" & Val(cb_Id.Text) & ",'" & Trim(cb_Proveedor.Text) & "','" & Trim(tb_Fecha.Text) & "','" & Trim(cb_Moneda.Text) & "','" _
                                 & Trim(cb_Articulo.Text) & "'," & Val(tb_Cantidad.Text) & ");"
-            oArticulos.AltaStock(DgD, cb_Articulo)
+            oArticulos.AltaStock(cb_Articulo.Text, tb_Cantidad.Text)
         Else
             Mensaje(3)
         End If

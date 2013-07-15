@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class oConsultaProveedores
+
 #Region " Private Properties "
 
     Protected miNumProv As Integer = Nothing
@@ -15,29 +16,28 @@ Public Class oConsultaProveedores
 #Region "Constructor"
 
     Sub New(ByVal NumProv As Integer)
-        Using oTable As DataTable = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, "Select NUM_PROV from PROVEEDORES where NUM_PROV = " & miNumProv).Tables(0)
-            If oTable.Rows.Count = 1 Then
-                miNumProv = oTable.Rows(0).Item("NUM_PROV")
-                miRazon = oTable.Rows(0).Item("RAZON")
-                miNomFantasia = oTable.Rows(0).Item("NOM_FANTASIA")
-                miDomicilio = oTable.Rows(0).Item("DOMICILIO")
-                miCuit = oTable.Rows(0).Item("CUIT")
-                miEstado = oTable.Rows(0).Item("ESTADO")
-            End If
-        End Using
+        If Not NumProv = 0 Then
+            Dim oTable As SqlDataReader = SqlHelper.ExecuteReader(SQLProvider.ConnectionString, CommandType.Text, "Select * from PROVEEDORES where NUM_PROV = " & NumProv)
+            While oTable.Read
+                miNumProv = oTable.Item("NUM_PROV")
+                miRazon = oTable.Item("RAZON")
+                miNomFantasia = oTable.Item("NOM_FANTASIA")
+                miDomicilio = oTable.Item("DOMICILIO")
+                miCuit = oTable.Item("CUIT")
+                miEstado = oTable.Item("ESTADO")
+            End While
+            oTable.Close()
+        End If
     End Sub
 
 #End Region
 
 #Region " Public Properties "
 
-    Public Property NUM_PROV As Integer
+    Public ReadOnly Property NUM_PROV As Integer
         Get
             Return miNumProv
         End Get
-        Set(ByVal value As Integer)
-            miNumProv = value
-        End Set
     End Property
 
 

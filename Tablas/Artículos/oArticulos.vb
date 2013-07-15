@@ -1,15 +1,152 @@
-﻿Public Class oArticulos
+﻿Imports System.Data.SqlClient
 
-    Shared Sub AltaStock(ByVal DgD As DataGridView, ByVal Tnumero As ComboBox)
-        LimpiarDG(DgD)
+Public Class oArticulos
+
+#Region " Private Properties "
+
+    Protected miCodArticulo As String = Nothing
+    Protected miCodBarras As String = Nothing
+    Protected miDescripArticulo As String = Nothing
+    Protected miPrecioUni As Double = Nothing
+    Protected miStockMin As Integer = Nothing
+    Protected miCantStock As Integer = Nothing
+    Protected miPuntoRep As Integer = Nothing
+    Protected miCosto As Double = Nothing
+    Protected miEmbalaje As Double = Nothing
+    Protected miFlete As Double = Nothing
+
+#End Region
+
+#Region "Constructor"
+
+    Sub New(ByVal CodArticulo As String)
+        If Not CodArticulo = 0 Then
+            Dim oTable As SqlDataReader = SqlHelper.ExecuteReader(SQLProvider.ConnectionString, CommandType.Text, "Select * from ARTICULOS where COD_ARTICULO = '" & Trim(CodArticulo) & "'")
+            While oTable.Read
+                miCodArticulo = oTable.Item("COD_ARTICULO")
+                miCodBarras = oTable.Item("COD_BARRAS")
+                miDescripArticulo = oTable.Item("DESCRIP_ARTI")
+                miPrecioUni = oTable.Item("PRECIO_UNI")
+                miStockMin = oTable.Item("STOCK_MIN")
+                miCantStock = oTable.Item("CANT_STOCK")
+                miPuntoRep = oTable.Item("PUNTO_REPO")
+                miCosto = oTable.Item("COSTO")
+                miEmbalaje = oTable.Item("EMBALAJE")
+                miFlete = oTable.Item("FLETE")
+            End While
+            oTable.Close()
+        End If
+    End Sub
+
+#End Region
+
+#Region " Public Properties "
+
+    Public ReadOnly Property COD_ARTICULO As Integer
+        Get
+            Return miCodArticulo
+        End Get
+    End Property
+
+
+    Public Property COD_BARRAS As String
+        Get
+            Return miCodBarras
+        End Get
+        Set(ByVal value As String)
+            miCodBarras = value
+        End Set
+    End Property
+
+    Public Property DESCRIP_ARTI As String
+        Get
+            Return miDescripArticulo
+        End Get
+        Set(ByVal value As String)
+            miDescripArticulo = value
+        End Set
+    End Property
+
+
+    Public Property PRECIO_UNI As String
+        Get
+            Return miPrecioUni
+        End Get
+        Set(ByVal value As String)
+            miPrecioUni = value
+        End Set
+    End Property
+
+
+    Public Property STOCK_MIN As String
+        Get
+            Return miStockMin
+        End Get
+        Set(ByVal value As String)
+            miStockMin = value
+        End Set
+    End Property
+
+    Public Property CANT_STOCK As String
+        Get
+            Return miCantStock
+        End Get
+        Set(ByVal value As String)
+            miCantStock = value
+        End Set
+    End Property
+
+    Public Property PUNTO_REPO As String
+        Get
+            Return miPuntoRep
+        End Get
+        Set(ByVal value As String)
+            miPuntoRep = value
+        End Set
+    End Property
+
+    Public Property COSTO As String
+        Get
+            Return miCosto
+        End Get
+        Set(ByVal value As String)
+            miCosto = value
+        End Set
+    End Property
+
+    Public Property EMBALAJE As String
+        Get
+            Return miEmbalaje
+        End Get
+        Set(ByVal value As String)
+            miEmbalaje = value
+        End Set
+    End Property
+
+    Public Property FLETE As String
+        Get
+            Return miFlete
+        End Get
+        Set(ByVal value As String)
+            miFlete = value
+        End Set
+    End Property
+
+#End Region
+
+#Region "Public Funtions"
+
+    Shared Sub AltaStock(ByVal Articulo As String, ByVal Cantidad As Integer)
         Mensaje(11)
         If Msg = vbOK Then
+            Dim Suma As Integer, Stock As Integer, strFinal As String
             SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strAlta_Stock)
+            Dim MiArticulos As New oArticulos(Articulo)
+            Stock = MiArticulos.CANT_STOCK
+            Suma = Cantidad + Stock
+            strFinal = "UPDATE ARTICULOS SET CANT_STOCK = " & Val(Cantidad) & "' WHERE COD_ARTICULO = " & "'" & Trim(Articulo) & "'"
+            SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strFinal)
             Mensaje(12)
-            'DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select DESCRIP_ARTI from ARTICULOS where DESCRIP_ARTI = '" & Trim(Tnumero.Text) & "'")).Tables(0)
-            'If DgD.Rows.Count > 0 Then
-            '    'SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "INSERT INTO ARTICULOS VALUES " & "(CANT_STOCK) VALUES " & "('" & Trim(cb_Codigo.Text) & ");")
-            'End If
         End If
     End Sub
 
@@ -69,5 +206,7 @@
             Mensaje(8)
         End If
     End Sub
+
+#End Region
 
 End Class
