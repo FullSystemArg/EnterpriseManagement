@@ -144,7 +144,7 @@ Public Class oArticulos
             Dim MiArticulos As New oArticulos(Articulo)
             Stock = MiArticulos.CANT_STOCK
             Suma = Cantidad + Stock
-            strFinal = "UPDATE ARTICULOS SET CANT_STOCK = " & Val(Cantidad) & " WHERE COD_ARTICULO = '" & Trim(Articulo) & "'"
+            strFinal = "UPDATE ARTICULOS SET CANT_STOCK = " & Val(Suma) & " WHERE COD_ARTICULO = '" & Trim(Articulo) & "'"
             SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strFinal)
             Mensaje(12)
         End If
